@@ -1,0 +1,139 @@
+<!---------- Menu page ----------
+  Page that displays the selected restaurant name, 
+  its address, and the relevant dishes from the 
+  menu based on the user's preferences. It also 
+  includes an option to go back and choose another restaurant.
+-------------------------------->
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picky | תפריט מסעדה</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS file -->
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+
+        <a href="home.html" class="logo-area">
+            <img src="images/logo.png" alt="הלוגו של Picky" class="site-logo">
+        </a>
+
+        <nav class="main-nav">
+            <a href="home.html">
+                <span>⌂</span>
+                בית
+            </a>
+
+            <a href="preferences.html">
+                <span>♡</span>
+                העדפות
+            </a>
+
+            <a href="restaurants.html">
+                <span>⌖</span>
+                מסעדות
+            </a>
+        </nav>
+
+        <a href="index.html" class="logout-btn">
+            <span>⇱</span>
+            התנתקות
+        </a>
+
+    </header>
+
+    <main class="page-container">
+
+        <section class="menu-page-hero">
+
+            <div>
+                <span class="page-kicker">תפריט מסעדה</span>
+
+                <h1 id="restaurantName">טוען מסעדה...</h1>
+
+                <p id="restaurantDescription">
+                    כאן יוצגו המנות של המסעדה שבחרתם.
+                </p>
+            </div>
+
+            <div class="selected-restaurant-box">
+
+                <p>המסעדה שנבחרה:</p>
+
+                <h2 id="selectedRestaurantName">---</h2>
+
+                <span id="selectedRestaurantAddress">---</span>
+
+                <a href="restaurants.html" class="back-btn">
+                    חזרה לבחירת מסעדה
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="results-area menu-page-results">
+
+            <div class="section-title-row">
+                <div>
+                    <h2>מנות במסעדה</h2>
+                    <p id="menuSubtitle">
+                        בחרתם מסעדה, ועכשיו אפשר לראות את המנות שלה.
+                    </p>
+                </div>
+            </div>
+
+            <div id="menuResults" class="menu-results"></div>
+
+        </section>
+
+    </main>
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Picky logo">
+            <span>Picky</span>
+        </div>
+
+        <p>Picky©</p>
+
+        <!-- Contact section -->
+        <div class="contact-links">
+
+            <img src="images/wave-hand.gif" alt="יד מנופפת" class="contact-wave-gif">
+
+            <div class="contact-text">
+                <h3>צרו איתנו קשר</h3>
+
+                <a href="https://wa.me/972585210521" target="_blank">
+                    WhatsApp
+                </a>
+
+                <a 
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=omersba@gmail.com"
+                    target="_blank">
+                    Email
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/menu.js"></script>
+
+</body>
+</html>

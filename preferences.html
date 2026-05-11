@@ -1,0 +1,341 @@
+<!---------- Preferences page ----------
+  Page that allows users to set their dietary preferences,
+  allergies, and other considerations for restaurant selection.
+-------------------------------->
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picky | העדפות תזונתיות</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS file -->
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+
+        <a href="home.html" class="logo-area">
+            <img src="images/logo.png" alt="הלוגו של Picky" class="site-logo">
+        </a>
+
+        <nav class="main-nav">
+            <a href="home.html">
+                <span>⌂</span>
+                בית
+            </a>
+
+            <a href="preferences.html" class="active-link">
+                <span>♡</span>
+                העדפות
+            </a>
+
+            <a href="restaurants.html">
+                <span>⌖</span>
+                מסעדות
+            </a>
+        </nav>
+
+        <a href="index.html" class="logout-btn">
+            <span>⇱</span>
+            התנתקות
+        </a>
+
+    </header>
+
+    <main class="page-container">
+
+        <section class="preferences-hero">
+
+            <span class="page-kicker">התאמה אישית</span>
+
+            <h1>העדפות תזונתיות</h1>
+
+            <p>
+                סמנו את ההעדפות, הרגישויות והרכיבים שתרצו להימנע מהם.
+                לפי הבחירות האלו המערכת תציג לכם מסעדות, מנות והערות התאמה רלוונטיות בלבד.
+            </p>
+
+        </section>
+
+        <section class="preferences-wrapper">
+
+            <form id="preferencesForm" class="preferences-form">
+
+                <div class="preferences-section">
+
+                    <h2>1. העדפות תזונתיות</h2>
+
+                    <p class="section-helper">
+                        בחרו את סוגי ההתאמה שרלוונטיים לכם.
+                    </p>
+
+                    <div class="checkbox-group">
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dietary" value="vegetarian">
+                            צמחוני
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dietary" value="vegan">
+                            טבעוני
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dietary" value="gluten-free">
+                            ללא גלוטן
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dietary" value="lactose-free">
+                            ללא לקטוז
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dietary" value="kosher">
+                            כשר
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="preferences-section">
+
+                    <h2>2. אלרגיות ורגישויות</h2>
+
+                    <p class="section-helper warning-text">
+                        שימו לב: במקרה של אלרגיה חמורה או סכנת חיים, חובה לוודא מול צוות המסעדה.
+                    </p>
+
+                    <div class="checkbox-group">
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="allergens" value="peanuts">
+                            בוטנים
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="allergens" value="milk">
+                            חלב
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="allergens" value="egg">
+                            ביצים
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="allergens" value="soy">
+                            סויה
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="allergens" value="sesame">
+                            שומשום
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="allergens" value="tree-nuts">
+                            אגוזים
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="allergens" value="fish">
+                            דגים
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="preferences-section">
+
+                    <h2>3. רכיבים שנעדיף להשאיר מחוץ לצלחת</h2>
+
+                    <p class="section-helper">
+                        אפשר לבחור כמה רכיבים. המערכת תציג הערות התאמה רק אם יש קשר לרכיבים שבחרתם.
+                    </p>
+
+                    <div class="checkbox-group dislikes-group">
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="cilantro">
+                            כוסברה
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="tomato">
+                            עגבנייה
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="onion">
+                            בצל
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="garlic">
+                            שום
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="mushrooms">
+                            פטריות
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="eggplant">
+                            חציל
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="olives">
+                            זיתים
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="hot-pepper">
+                            פלפל חריף
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="bell-pepper">
+                            פלפל אדום / גמבה
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="cucumber">
+                            מלפפון
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="corn">
+                            תירס
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="peas">
+                            אפונה
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="mayonnaise">
+                            מיונז
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="mustard">
+                            חרדל
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="tuna">
+                            טונה
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="cinnamon">
+                            קינמון
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="dill">
+                            שמיר
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="parsley">
+                            פטרוזיליה
+                        </label>
+
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="dislikes" value="broccoli">
+                            ברוקולי
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <!-- Feedback message for the user and an option to send an email suggesting additional restrictions -->
+                <div class="preferences-feedback">
+                    <p>
+                        יש העדפה שהייתם רוצים לסנן לפיה ולא מצאתם פה? נשמח להשתפר!
+                        <br>
+
+                        <a 
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=omersba@gmail.com&su=%D7%94%D7%A6%D7%A2%D7%94%20%D7%9C%D7%94%D7%95%D7%A1%D7%A4%D7%AA%20%D7%94%D7%A2%D7%93%D7%A4%D7%94%20%D7%AA%D7%96%D7%95%D7%A0%D7%AA%D7%99%D7%AA&body=%D7%90%D7%A0%D7%97%D7%A0%D7%95%20%D7%AA%D7%9E%D7%99%D7%93%20%D7%A9%D7%9E%D7%97%D7%99%D7%9D%20%D7%9C%D7%94%D7%A9%D7%AA%D7%A4%D7%A8%21%0A%D7%99%D7%A9%20%D7%9C%D7%9A%20%D7%94%D7%A2%D7%93%D7%A4%D7%95%D7%AA%20%D7%AA%D7%96%D7%95%D7%A0%D7%AA%D7%99%D7%95%D7%AA%20%D7%90%D7%97%D7%A8%D7%95%D7%AA%3F%20%D7%A0%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2."
+                            target="_blank">
+                            שלחו לנו מייל
+                        </a>
+
+                        ונוסיף אותה לאתר בהקדם 😊
+                    </p>
+                </div>
+
+                <div class="preferences-actions">
+
+                    <button type="submit" class="primary-btn">
+                        שמירת העדפות והמשך למסעדות
+                    </button>
+
+                    <button type="button" id="clearPreferencesBtn" class="secondary-btn">
+                        ניקוי בחירות
+                    </button>
+
+                </div>
+
+                <p id="preferencesMessage" class="preferences-message"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+    
+    <!-- Site footer -->
+    <footer class="site-footer">
+
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Picky logo">
+            <span>Picky</span>
+        </div>
+
+        <p>Picky©</p>
+
+        <!-- Contact section -->
+        <div class="contact-links">
+
+            <img src="images/wave-hand.gif" alt="יד מנופפת" class="contact-wave-gif">
+
+            <div class="contact-text">
+                <h3>צרו איתנו קשר</h3>
+
+                <a href="https://wa.me/972585210521" target="_blank">
+                    WhatsApp
+                </a>
+
+                <a 
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=omershah@post.bgu.ac.il"
+                    target="_blank">
+                    Email
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="js/preferences.js"></script>
+
+</body>
+</html>

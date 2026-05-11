@@ -1,0 +1,288 @@
+<!---------- Index page ----------
+  Page that allows users to log in or sign up,
+  displays information about the website and 
+  frequently asked questions, 
+  and provides a contact option.
+-------------------------------->
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picky - התחברות</title>
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS file -->
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Picky logo" class="logo">
+            <span class="site-name">Picky</span>
+        </div>
+
+            <nav class="main-nav">
+            <a href="#about">עלינו</a>
+            <a href="#how-it-works">איך זה עובד</a>
+            <a href="#contact">צור קשר</a>
+        </nav>
+    </header>
+
+        <!-- Main section of the page -->
+        <main class="home-layout">
+
+        <!-- System explanation section -->
+        <section class="intro-section">
+
+            <div class="intro-text">
+                <h1>לאכול במסעדה בביטחון</h1>
+
+                <h2>מצאו מנות שמתאימות בדיוק לצרכים שלכם.</h2>
+
+                <p>
+                    Picky עוזרת לכם למצוא מנות במסעדות לפי אלרגיות, רגישויות והעדפות תזונתיות.
+                    כך תוכלו לבחור מנה בצורה פשוטה, רגועה וברורה יותר.
+                </p>
+            </div>
+
+            <!-- How it works section -->
+            <div id="how-it-works" class="steps-row">
+
+                <div class="small-step">
+                    <div class="step-icon">1</div>
+                    <h3>יוצרים פרופיל</h3>
+                    <p>מגדירים רגישויות, אלרגיות והעדפות אישיות.</p>
+                </div>
+
+                <div class="step-line"></div>
+
+                <div class="small-step">
+                    <div class="step-icon">2</div>
+                    <h3>בוחרים מסעדה</h3>
+                    <p>המערכת מציגה מסעדות שמתאימות לפרופיל שלכם.</p>
+                </div>
+
+                <div class="step-line"></div>
+
+                <div class="small-step">
+                    <div class="step-icon">3</div>
+                    <h3>מקבלים תפריט אישי</h3>
+                    <p>רואים מנות שמתאימות לכם או דורשות התאמה קטנה.</p>
+                </div>
+
+            </div>
+
+            <div class="food-image-box">
+                <img src="images/hero-food.jpg" alt="מנה במסעדה">
+            </div>
+
+        </section>
+
+        <!-- Login form section -->
+        <section class="auth-section">
+
+            <div class="auth-card">
+
+                <div class="auth-tabs">
+                    <button class="tab active-tab" type="button" id="showLoginBtn">התחברות</button>
+                    <button class="tab signup-tab" type="button" id="showRegisterBtn">הרשמה</button>
+                </div>
+
+                <form id="loginForm" class="form-box">
+
+                    <div class="form-group">
+                        <label for="username">שם משתמש</label>
+                        <input 
+                            type="text"
+                            id="loginUsername"
+                            name="username"
+                            placeholder="הכניסו שם משתמש">
+                        <small class="error-message" id="usernameError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">סיסמה</label>
+                        <input 
+                            type="password"
+                            id="loginPassword"
+                            name="password"
+                            placeholder="הכניסו סיסמה">
+                        <small class="error-message" id="passwordError"></small>
+                    </div>
+
+
+                    <button type="submit" class="primary-btn full-width-btn">התחברות</button>
+
+                   
+                <p class="signup-text">
+                    אין לך עדיין משתמש?
+                    <button type="button" id="showRegisterTextBtn" class="text-btn">הירשם עכשיו</button>
+                </p>
+
+                    <p id="loginMessage" class="form-message"></p>
+
+                </form>
+
+                <form id="registerForm" class="form-box hidden">
+
+                    <div class="form-group">
+                        <label for="registerFullName">שם מלא</label>
+                        <input 
+                            type="text"
+                            id="registerFullName"
+                            name="registerFullName"
+                            placeholder="הכניסו שם מלא">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerUsername">שם משתמש</label>
+                        <input 
+                            type="text"
+                            id="registerUsername"
+                            name="registerUsername"
+                            placeholder="בחרו שם משתמש">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">סיסמה</label>
+                        <input 
+                            type="password"
+                            id="registerPassword"
+                            name="registerPassword"
+                            placeholder="בחרו סיסמה">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">אימות סיסמה</label>
+                        <input 
+                            type="password"
+                            id="registerConfirmPassword"
+                            name="registerConfirmPassword"
+                            placeholder="הכניסו שוב את הסיסמה">
+                    </div>
+
+                    <button type="submit" class="primary-btn full-width-btn">יצירת משתמש</button>
+
+                    <p class="signup-text">
+                        כבר יש לך משתמש?
+                        <button type="button" id="showLoginTextBtn" class="text-btn">חזרה להתחברות</button>
+                    </p>
+
+                    <p id="registerMessage" class="form-message"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Paragraph that contains the information about us -->
+    <section id="about" class="about-section">
+        <h2>קצת עלינו</h2>
+
+        <p>
+            Picky נוצרה מתוך צורך אמיתי להפוך את חוויית הבחירה במסעדות לפשוטה ובטוחה יותר.
+            אנשים עם רגישויות, אלרגיות או העדפות תזונתיות נדרשים לעיתים לקרוא תפריטים ארוכים,
+            לשאול שאלות רבות, ועדיין לא תמיד להיות בטוחים שהמנה שבחרו מתאימה להם.
+        </p>
+
+        <p>
+            המערכת מאפשרת לכל משתמש להגדיר פרופיל אישי, לבחור מסעדה, ולקבל תפריט מותאם שמציג
+            את המנות הרלוונטיות עבורו. המטרה היא להפחית עומס, לחסוך זמן, ולתת תחושת ביטחון בתהליך הבחירה.
+        </p>
+    </section>
+
+
+
+        <!-- Frequently asked questions display -->
+    <section id="faq" class="faq-section">
+        <h2>שאלות נפוצות</h2>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <h3>האם Picky מחליפה בדיקה מול המסעדה?</h3>
+                <p>
+                    לא. המערכת עוזרת לסנן ולהציג מידע בצורה נוחה יותר, אבל במקרה של אלרגיה חמורה
+                    תמיד חשוב לוודא מול צוות המסעדה שהמנה באמת מתאימה.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>איך המערכת יודעת אילו מנות מתאימות לי?</h3>
+                <p>
+                    המשתמש מגדיר העדפות, רגישויות ואלרגיות, והמערכת משווה אותן למידע שקיים על המנות
+                    במסעדות כדי להציג מנות מתאימות או מנות שדורשות התאמה.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>האם אפשר לשנות העדפות אחרי ההרשמה?</h3>
+                <p>
+                    כן. בכל שלב אפשר לחזור לעמוד ההעדפות ולעדכן את הבחירות האישיות.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>האם כל המסעדות מופיעות באתר?</h3>
+                <p>
+                    לא. באתר יוצגו רק מסעדות שהמידע שלהן קיים במערכת ושניתן לבצע עבורן התאמה אישית
+                    לפי פרופיל המשתמש.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Site footer -->
+    <footer id="contact" class="site-footer">
+
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Picky logo">
+            <span>Picky</span>
+        </div>
+
+        <p>©Picky</p>
+
+        <div class="footer-links">
+            <a href="#about">עלינו</a>
+            <a href="#how-it-works">איך זה עובד</a>
+            <a href="#faq">שאלות נפוצות</a>        </div>
+
+        <!-- Contact section -->
+        <div class="contact-links">
+
+            <img src="images/wave-hand.gif" alt="יד מנופפת" class="contact-wave-gif">
+
+            <div class="contact-text">
+                <h3>צרו איתנו קשר</h3>
+
+                <a href="https://wa.me/972585210521" target="_blank">
+                    WhatsApp
+                </a>
+
+                <a 
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=omershah@post.bgu.ac.il"
+                    target="_blank">
+                    Email
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="js/users.js"></script>
+    </body>
+    </html>

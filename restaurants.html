@@ -1,0 +1,180 @@
+<!---------- Restaurants page ----------
+ Page where a list of cities is first displayed for
+  the user to choose from. Based on the selected city,
+  the relevant restaurants in that city are displayed,
+  with each restaurant showing how many dishes match the 
+  user's defined preferences.
+-------------------------------->
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picky | בחירת מסעדה</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS file -->    
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    
+    <!-- Header -->
+    <header class="site-header">
+
+        <a href="home.html" class="logo-area">
+            <img src="images/logo.png" alt="הלוגו של Picky" class="site-logo">
+        </a>
+
+        <nav class="main-nav">
+            <a href="home.html">
+                <span>⌂</span>
+                בית
+            </a>
+
+            <a href="preferences.html">
+                <span>♡</span>
+                העדפות
+            </a>
+
+            <a href="restaurants.html" class="active-link">
+                <span>⌖</span>
+                מסעדות
+            </a>
+        </nav>
+
+        <a href="index.html" class="logout-btn">
+            <span>⇱</span>
+            התנתקות
+        </a>
+
+    </header>
+
+    <main class="page-container">
+
+        <section class="restaurants-hero">
+
+            <div class="restaurants-hero-text">
+                <span class="page-kicker">בחירת מסעדה</span>
+
+                <h1>בחרו מיקום ומצאו מסעדה שמתאימה לכם</h1>
+
+                <p>
+                    בחרו עיר מהרשימה, ולאחר מכן יוצגו המסעדות הזמינות באותו אזור.
+                    לאחר בחירת מסעדה, תעברו לעמוד תפריט שבו יוצגו כל המנות של המסעדה.
+                </p>
+            </div>
+
+            <form class="location-box" id="locationForm">
+
+                <label for="citySelect">איפה תרצו לאכול?</label>
+
+                <div class="location-row">
+                    <select id="citySelect" required>
+                        <option value="">בחרו עיר</option>
+                        <option value="beer-sheva">באר שבע</option>
+                        <option value="haifa">חיפה</option>
+                        <option value="ashdod">אשדוד</option>
+                        <option value="tel-aviv">תל אביב</option>
+                    </select>
+
+                    <button type="submit" class="primary-btn">
+                        הצג מסעדות
+                    </button>
+                </div>
+
+                <p id="locationMessage" class="helper-message">
+                    לאחר בחירת עיר תופיע כאן רשימת המסעדות הרלוונטיות.
+                </p>
+
+            </form>
+
+        </section>
+
+        <section class="content-grid">
+
+        <aside class="side-card">
+
+            <h2 id="restaurantPreferencesTitle">העדפות המשתמש</h2>
+            
+            <div class="active-preferences" id="restaurantUserPreferences">
+                <!-- כאן יוצגו ההעדפות של המשתמש המחובר -->
+            </div>
+
+            <p id="restaurantPreferencesText">
+                ההעדפות האלו משמשות לסינון ולהצגת הערות התאמה רלוונטיות בלבד.
+            </p>
+
+            <a href="preferences.html" class="bottom-link" id="restaurantPreferencesLink">
+                לעדכון העדפות
+                <span>←</span>
+            </a>
+
+        </aside>
+
+            <section class="results-area" id="restaurantsSection">
+
+                <div class="section-title-row">
+                    <div>
+                        <h2 id="resultsTitle">מסעדות זמינות</h2>
+                        <p id="resultsSubtitle">בחרו עיר כדי להתחיל.</p>
+                    </div>
+                </div>
+
+                <div id="restaurantsList" class="restaurants-results">
+
+                    <div class="empty-state">
+                        <span>⌖</span>
+                        <h3>עדיין לא נבחר מיקום</h3>
+                        <p>בחרו עיר בחלק העליון של העמוד כדי לראות מסעדות.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+    
+<!-- Site footer -->
+<footer class="site-footer">
+
+    <div class="footer-logo">
+        <img src="images/logo.png" alt="Picky logo">
+        <span>Picky</span>
+    </div>
+
+    <p>Picky©</p>
+
+    <!-- Contact section -->
+    <div class="contact-links">
+
+        <img src="images/wave-hand.gif" alt="יד מנופפת" class="contact-wave-gif">
+
+        <div class="contact-text">
+            <h3>צרו איתנו קשר</h3>
+
+            <a href="https://wa.me/972585210521" target="_blank">
+                WhatsApp
+            </a>
+
+            <a 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=omershah@post.bgu.ac.il"
+                target="_blank">
+                Email
+            </a>
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/restaurants.js"></script>
+
+</body>
+</html>

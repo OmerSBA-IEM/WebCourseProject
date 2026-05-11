@@ -1,0 +1,199 @@
+<!---------- Home page ----------
+  Opens after the user logs into the system.
+  Contains explanations about the website,
+  a summary of the user's preferences, and 
+  links to the preference settings and restaurant 
+  selection pages.
+-------------------------------->
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picky | עמוד הבית</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+
+        <a href="home.html" class="logo-area">
+            <img src="images/logo.png" alt="הלוגו של Picky" class="site-logo">
+        </a>
+
+        <nav class="main-nav">
+            <a href="home.html" class="active-link">
+                <span>⌂</span>
+                בית
+            </a>
+
+            <a href="preferences.html">
+                <span>♡</span>
+                העדפות
+            </a>
+
+            <a href="restaurants.html">
+                <span>⌖</span>
+                מסעדות
+            </a>
+        </nav>
+
+       <a href="#" id="logoutBtn" class="logout-btn">
+            <span>⇱</span>
+            התנתקות
+        </a>
+
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-container">
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+
+            <div class="hero-text">
+                <h1 id="welcomeUser">ברוכים הבאים לPicky</h1>
+                <p>
+                    Picky עוזרת לכם למצוא מנות במסעדות שמתאימות לאלרגיות,
+                    רגישויות והעדפות תזונתיות כדי שתוכלו לבחור מה לאכול
+                    בצורה פשוטה, ברורה ובטוחה יותר.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="preferences.html" class="primary-btn">
+                        ⚙ עדכון העדפות
+                    </a>
+
+                    <a href="restaurants.html" class="outline-btn">
+                        🔍 חיפוש מסעדות
+                    </a>
+                </div>
+            </div>
+
+           <div class="hero-image slider">
+                <img
+                    id="heroSliderImage"
+                    src="images/home-slider/1.png"
+                    alt="תמונת אוכל מתחלפת באתר Picky">
+
+                <div class="slider-dots">
+                    <span class="dot active-dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Cards Section -->
+        <section class="cards-grid">
+
+            <!-- Profile Card -->
+            <article class="dashboard-card profile-card">
+
+                <div class="profile-header">
+                    <div>
+                        <h2>סיכום הפרופיל שלך</h2>
+                        <p id="profilePreferencesText">העדפות התזונה שנשמרו במערכת.</p>                    </div>
+
+                </div>
+
+                <div class="tags-row" id="profilePreferencesTags">
+                    <!-- כאן יוצגו ההעדפות שנשמרו למשתמש -->
+                </div>
+
+                <div class="card-note">
+                    <p id="profilePreferencesNote">
+                        נשתמש בהעדפות האלו כדי לסנן רכיבים ומנות שלא מתאימים לך.
+                    </p>
+                </div>
+
+                <a href="preferences.html" class="bottom-link" id="profilePreferencesLink">
+                    צפייה בכל ההעדפות
+                    <span>←</span>
+                </a>
+
+            </article>
+
+            <!-- How It Works Card -->
+            <article class="dashboard-card how-card">
+
+                <h2>איך זה עובד?</h2>
+
+                <div class="steps-line">
+
+                    <div class="step">
+                        <div class="step-icon">⚙</div>
+                        <div class="step-number">1</div>
+                        <h3>מגדירים העדפות</h3>
+                        <p>מזינים רגישויות, אלרגיות והעדפות תזונתיות.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-icon">⌖</div>
+                        <div class="step-number">2</div>
+                        <h3>בוחרים מסעדה</h3>
+                        <p>בוחרים עיר ומסעדה מתוך המאגר באתר.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-icon">▣</div>
+                        <div class="step-number">3</div>
+                        <h3>מקבלים תפריט</h3>
+                        <p>צופים במנות שמתאימות לפרופיל האישי שלך.</p>
+                    </div>
+
+                </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Picky logo">
+            <span>Picky</span>
+        </div>
+
+        <p>Picky©</p>
+
+        <!-- Contact section -->
+        <div class="contact-links">
+
+            <img src="images/wave-hand.gif" alt="יד מנופפת" class="contact-wave-gif">
+
+            <div class="contact-text">
+                <h3>צרו איתנו קשר</h3>
+
+                <a href="https://wa.me/972585210521" target="_blank">
+                    WhatsApp
+                </a>
+
+                <a 
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=omershah@post.bgu.ac.il"
+                    target="_blank">
+                    Email
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+    
+    <script src="js/home.js"></script>
+</body>
+</html>
